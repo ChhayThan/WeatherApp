@@ -23,36 +23,45 @@
           />
           <button class="btn searchBtn">Search</button>
         </div>
+        <div class="searchErrorMessage"></div>
 
-        <h1>Ottawa</h1>
+        <h1 id="city">Ottawa</h1>
         <div class="weatherStatus">
-          <h2>21&deg;C</h2>
-          <h3>Raining</h3>
+          <h2 id="currentTemp">21&deg;C</h2>
+          <h3 id="weatherCondition">Raining</h3>
           <img id="weatherIcon" />
         </div>
-        <div class="weatherInfo">
-          <p class="highestTemp">H:25&deg;C</p>
-          <p class="lowestTemp">L:19&deg;C</p>
+        <div class="date">
+          <h4>21/05/2024</h4>
         </div>
       </div>
       <div class="weatherForecast">
-        <div class="forecastItem todayWeather">
+        <div id="todayWeather" class="forecastItem">
           <h3 class="forecastTitle">Today</h3>
           <h3 class="rainPercent">22% rain</h3>
           <img id="todayWeatherIcon" />
-          <h4>22&deg;C</h4>
+          <div class="weatherInfo">
+            <p class="highestTemp">H:25&deg;C</p>
+            <p class="lowestTemp">L:19&deg;C</p>
+          </div>
         </div>
-        <div class="forecastItem tomorrowWeather">
+        <div id="tomorrowWeather" class="forecastItem">
           <h3 class="forecastTitle">Tomorrow</h3>
           <h3 class="rainPercent">16% rain</h3>
           <img id="tomorrowWeatherIcon" />
-          <h4>24&deg;C</h4>
+          <div class="weatherInfo">
+            <p class="highestTemp">H:25&deg;C</p>
+            <p class="lowestTemp">L:19&deg;C</p>
+          </div>
         </div>
-        <div class="forecastItem nextTomorrowWeather">
+        <div id="nextTomorrowWeather" class="forecastItem">
           <h3 class="forecastTitle">Next Tomorrow</h3>
           <h3 class="rainPercent">8% rain</h3>
           <img id="nextTomorrowWeatherIcon" />
-          <h4>26&deg;C</h4>
+          <div class="weatherInfo">
+            <p class="highestTemp">H:25&deg;C</p>
+            <p class="lowestTemp">L:19&deg;C</p>
+          </div>
         </div>
       </div>
     </div>

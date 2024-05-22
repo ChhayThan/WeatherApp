@@ -1,4 +1,6 @@
-# webpackTemplate
+# Weather App TOP Project
+
+Learning JS Promises/ async & await / API Calls
 
 Includes ESLint
 

@@ -46,6 +46,7 @@ div.nav button:active {
 button span.active {
   font-weight: bold;
   font-size: 1.5rem;
+  color: dodgerblue;
 }
 
 div.main {

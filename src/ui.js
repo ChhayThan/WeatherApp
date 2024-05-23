@@ -108,10 +108,17 @@ const ui = (function () {
     currentDate.innerText = localTime;
   }
 
-  function renderForecast(data) {
-    const date = data.forecast.forecastday[0].date;
+  function getDay(data, dayNum) {
+    const date = data.forecast.forecastday[dayNum].date;
     const dateObject = new Date(date);
     const day = dateObject.getDate();
+
+    return day;
+  }
+
+  function renderForecast(data) {
+    const tomorrowDayDate = getDay(data, 1);
+    const nextTomorrowDayDate = getDay(data, 2);
 
     const todayRainPercent =
       data.forecast.forecastday[0].day.daily_chance_of_rain;
@@ -147,7 +154,7 @@ const ui = (function () {
     const tomorrowForecastTitle = document.querySelector(
       "div#tomorrowWeather h3.forecastTitle"
     );
-    tomorrowForecastTitle.innerText = `${day + 1}`;
+    tomorrowForecastTitle.innerText = `${tomorrowDayDate}`;
     const h3TomorrowRainPercent = document.querySelector(
       "div#tomorrowWeather h3.rainPercent"
     );
@@ -169,7 +176,7 @@ const ui = (function () {
     const h3NextTomorrowForecastTitle = document.querySelector(
       "div#nextTomorrowWeather h3.forecastTitle"
     );
-    h3NextTomorrowForecastTitle.innerText = `${day + 2}`;
+    h3NextTomorrowForecastTitle.innerText = `${nextTomorrowDayDate}`;
     const h3NextTomorrowRainPercent = document.querySelector(
       "div#nextTomorrowWeather h3.rainPercent"
     );
